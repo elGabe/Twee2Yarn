@@ -1,0 +1,350 @@
+=== 
+
+title: StoryTitle
+tags: 
+---
+
+
+TEST - Yarn Encounter 01
+
+
+=== 
+
+title: StoryTitle
+tags: 
+---
+
+
+{
+	"ifid": "14AA57BE-DCDE-43C7-958C-7FDCC3AD7C22",
+	"format": "SugarCube",
+	"format-version": "2.31.1",
+	"start": "START",
+	"zoom": 1
+}
+
+
+=== 
+
+title: StoryTitle
+tags: 
+---
+
+ {"position":"1500,300","size":"100,100"}
+[[TEST 01]] 
+
+<<set $time = 0>>
+
+
+=== 
+
+title: StoryTitle
+tags: 
+---
+
+ flow {"position":"500,300","size":"200,100"}
+!!!ASK
+YOU:"What kind of plants do you grow?"|
+YOU:"Mostly tabacco. Humans seem to love that stuff."|
+
+YOU:"What can you 
+
+
+
+!!!TELL
+YOU:"Your fields are full of tabacco."|
+YOU:"Yup! Humans seem to love that stuff."|
+
+YOU:"The Elves forecast a lot of rain this cycle."|
+YOU:"
+
+
+=== 
+
+title: StoryTitle
+tags: 
+---
+
+ flow {"position":"500,1100","size":"200,100"}
+!!BOOK
+A dusty old tome. It has the 5-sided star on its front, which often denotes arcana.
+
+
+=== 
+
+title: StoryTitle
+tags: 
+---
+
+ flow {"position":"500,1300","size":"200,100"}
+!!DESK
+A sturdy hardwood desk. Looks old. There's a layer of dust on the top. 3 drawers.
+* Open drawers
+* Examine desk
+* ITEM
+
+
+=== 
+
+title: StoryTitle
+tags: 
+---
+
+ flow {"position":"500,500","size":"200,100"}
+!!!ASK
+YOU:"What is this site?"|
+YOU:"These are the ruins of Thulan, city of the Deep Psions."|
+
+YOU:"What are the Deep Psions?"|
+YOU:"A race that supposedly pre-dates the Elves even."|
+
+
+
+
+!!!TELL
+YOU:"These mines are dangerous."|
+YOU:"Oh I know. Spend too long down here you lose your mind."|
+-mind
+
+YOU:"
+
+
+=== 
+
+title: StoryTitle
+tags: 
+---
+
+ flow {"position":"800,700","size":"200,100"}
+YOU:"Hey! What are you doing here?!"|
+
+YOU:"You! You're from above!"|
+
+
+!!!ASK
+YOU:"Do I look like I'm from the surface?"|
+YOU:"To be honest, ya!"|
+
+- IF last == A1
+YOU:"How can you tell?"|
+YOU:"Your skin has seen the suns."|
+
+
+- ELSE
+
+
+YOU:"Have you never been overland?"|
+YOU:"No. Nothing good up there anyway!"|
+
+
+
+
+- smell
+YOU:"What does the overland smell like?"|
+YOU:"Smells like trees.
+
+
+YOU:"Well can I go in anyway?"|
+YOU:"Not armed like that you can't! But if you're truly interested in coming to know the Deep Mind, then leave your weapons with Brother Darold."|
+
+
+
+- hive
+YOU:"Can you tell me a bit more about the Hive?"|
+YOU:"Our Hive is built on the nesting site of an ancient insect known as the Yoktal. They are believed to be some of the first psionicists."|
+
+YOU:"What's a psionicist?"|
+YOU:"A praticioner of psionics. One who harnesses the full power of the mind."|
+
+
+
+
+
+
+
+!!!TELL
+
+
+
+- hive
+YOU:"Tell me about the Hive?"|
+YOU:"Our Hive is built on the nesting site of an ancient insect known as the Yoktal. They are believed to be some of the first psionicists."|
+
+
+YOU:"I haven't eaten for a while."|
+YOU:"The Hive provides for all those who put their faith in the Deep Mind."|
+
+YOU:"I'd like to understand the Deep Mind."|
+YOU:"That will take time, but you have taken the first step."|
+
+
+-trees
+YOU:"I don't smell like trees!"|
+YOU:"Trust me, I know what trees smell like."|
+
+
+
+
+!!!DENY
+YOU:"I am not from the surface!"|
+YOU:"Then why do you smell like trees?"|
+- trees
+
+
+!!!ADMIT
+YOU:"Ok, I was travelling overland before this."|
+YOU:"I knew it! You smell like the overland!"|
+- smell
+
+
+
+
+----
+
+
+Are you?
+
+* HONESTY
+* DECEIPT
+
+
+!!HONESTY
+!!!ASK
+YOU:"Do you not allow outsiders?"|
+YOU:"Not ones as armed as you! If you are interested in coming to know the Deep Mind, then leave your weapons with Brother Darold."|
+
+YOU:"Where can I find Brother Darold."|
+YOU:"He's down the hall to the left. Leave your weapons, then he can take you in to show you the Hive."|
+- hive
+
+- hive
+YOU:"Can you tell me a bit more about the Hive?"|
+YOU:"Our Hive is built on the nesting site of an ancient insect known as the Yoktal. They are believed to be some of the first psionicists."|
+
+YOU:"What's a psionicist?"|
+YOU:"A praticioner of psionics. One who harnesses the full power of the mind."|
+
+
+
+
+!!!TELL
+YOU:"I was traveling overland before this."|
+YOU:"I knew it! You smelled like the overland."|
+
+YOU:"I haven't eaten for a while."|
+YOU:"The Hive provides for all those who put their faith in the Deep Mind."|
+
+YOU:"I'd like to understand the Deep Mind."|
+YOU:"That will take time, but you have taken the first step."|
+
+
+
+
+
+!!DECEIPT
+!!!ASK
+YOU:"Do I look like I'm from the surface?"|
+YOU:"To be honest, ya!"|
+
+YOU:"How can you tell I'm from above?"|
+YOU:"Your skin has seen the suns."|
+
+YOU:"Well can I go in anyway?"|
+YOU:"Not armed like that you can't! But if you're truly interested in coming to know the Deep Mind, then leave your weapons with Brother Darold."|
+
+
+!!!TELL
+YOU:"That's absurd! I live down here!"|
+YOU:"Then why do you smell like trees?"|
+
+YOU:"I don't smell like trees!"|
+YOU:"Trust me, I know what trees smell like."|
+
+YOU:"I'm telling you, I am from the Stone."|
+Is that true?
+\
+* YES
+YOU:"Alright, fine. Well you still can't come in here with all those weapons. Talk to Brother Darold, he can store them for you."|
+\
+* NO
+YOU:"I still think you're lying. But either way, you can't come in here with all those weapons. Talk to Brother Darold, he can store them for you."|
+
+
+=== 
+
+title: StoryTitle
+tags: 
+---
+
+ 01 {"position":"1900,200","size":"100,100"}
+YOU:"This place is spooky, even for me. Wanna get outta here?"|
+What do you say?
+<<button "OK">>
+	<<set $time ++>>
+	<<if $time > 1>>
+		<<goto "REPEAT">>
+	<<else>>
+		<<goto "OK">>
+	<</if>>
+<</button>>\
+<<button "NAH">>
+	<<set $time += 1>>
+	<<if $time > 1>>
+		<<goto "REPEAT">>
+	<<else>>
+		<<goto "NAH">>
+	<</if>>
+<</button>>
+
+
+=== 
+
+title: StoryTitle
+tags: 
+---
+
+ {"position":"1800,400","size":"100,100"}
+YOU:"Ok."|
+YOU:"Great, I'll go get my coat!"|
+
+[[TEST 01]] 
+$time
+
+
+=== 
+
+title: StoryTitle
+tags: 
+---
+
+ {"position":"2000,400","size":"100,100"}
+YOU:"Nah."|
+YOU:"Suit yourself, buddy."|
+
+[[TEST 01]] 
+$time
+
+
+=== 
+
+title: StoryTitle
+tags: 
+---
+
+ {"position":"1900,600","size":"100,100"}
+YOU:"Woa, I'm getting deja vu here."|
+[[START]] 
+
+StoryInit: $init
+
+
+=== 
+
+title: StoryTitle
+tags: 
+---
+
+ {"position":"1200,100","size":"100,100"}
+<<set $init = 100>>
+
+
