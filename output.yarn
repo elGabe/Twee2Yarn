@@ -30,7 +30,7 @@ title: StoryTitle
 tags: 
 ---
 
- {"position":"1500,300","size":"100,100"}
+ 
 [[TEST 01]] 
 
 <<set $time = 0>>
@@ -42,7 +42,7 @@ title: StoryTitle
 tags: 
 ---
 
- flow {"position":"500,300","size":"200,100"}
+ flow 
 !!!ASK
 YOU:"What kind of plants do you grow?"|
 YOU:"Mostly tabacco. Humans seem to love that stuff."|
@@ -65,7 +65,7 @@ title: StoryTitle
 tags: 
 ---
 
- flow {"position":"500,1100","size":"200,100"}
+ flow 
 !!BOOK
 A dusty old tome. It has the 5-sided star on its front, which often denotes arcana.
 
@@ -76,7 +76,7 @@ title: StoryTitle
 tags: 
 ---
 
- flow {"position":"500,1300","size":"200,100"}
+ flow 
 !!DESK
 A sturdy hardwood desk. Looks old. There's a layer of dust on the top. 3 drawers.
 * Open drawers
@@ -90,7 +90,7 @@ title: StoryTitle
 tags: 
 ---
 
- flow {"position":"500,500","size":"200,100"}
+ flow 
 !!!ASK
 YOU:"What is this site?"|
 YOU:"These are the ruins of Thulan, city of the Deep Psions."|
@@ -115,7 +115,7 @@ title: StoryTitle
 tags: 
 ---
 
- flow {"position":"800,700","size":"200,100"}
+ flow 
 YOU:"Hey! What are you doing here?!"|
 
 YOU:"You! You're from above!"|
@@ -276,7 +276,7 @@ title: StoryTitle
 tags: 
 ---
 
- 01 {"position":"1900,200","size":"100,100"}
+ 01 
 YOU:"This place is spooky, even for me. Wanna get outta here?"|
 What do you say?
 <<button "OK">>
@@ -303,7 +303,7 @@ title: StoryTitle
 tags: 
 ---
 
- {"position":"1800,400","size":"100,100"}
+ 
 YOU:"Ok."|
 YOU:"Great, I'll go get my coat!"|
 
@@ -317,7 +317,7 @@ title: StoryTitle
 tags: 
 ---
 
- {"position":"2000,400","size":"100,100"}
+ 
 YOU:"Nah."|
 YOU:"Suit yourself, buddy."|
 
@@ -331,7 +331,7 @@ title: StoryTitle
 tags: 
 ---
 
- {"position":"1900,600","size":"100,100"}
+ 
 YOU:"Woa, I'm getting deja vu here."|
 [[START]] 
 
@@ -344,7 +344,9 @@ title: StoryTitle
 tags: 
 ---
 
- {"position":"1200,100","size":"100,100"}
+ 
 <<set $init = 100>>
 
 
+
+===
