@@ -23,17 +23,17 @@ def regex_replace(regex, replacement_function):
     for m in matches:
         new_string = list(reg.sub(replacement_function(m), "".join(new_string)))
 
-def passage(m):
+def passage_header(m):
     name = "".join(copy_string[m.start()+3:m.end()])
     return "=== \n\ntitle: "+name +"\ntags: \n---\n\n"
 
 
-def dialogue_start(m):
+def speaker_name(m):
     return "".join(copy_string[m.start()+1:m.end()-1])
 
 
-regex_replace(r'(\:\:\s?\w+)', passage)
-regex_replace(r'(\|\W?\w+\W+\|)', dialogue_start)
+regex_replace(r'(\:\:\s?\w+)', passage_header)
+regex_replace(r'(\|\W?\w+\W+\|)', speaker_name)
 
 output_file.write("".join(new_string))
 
