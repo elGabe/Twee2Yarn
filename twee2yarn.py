@@ -1,28 +1,51 @@
 
 import re
+import click
 
-# Open the twee file to parse
-file = open('test.twee', 'r')
-# Asign the content of the twee file to a string
-content = file.read()
+content = ""
+copy_string = []
+new_string = []
 
-# List of characters from the content string
-copy_string = list(content)
+def parse_twee(source_path, target_path):
+    global content
+    global copy_string
+    global new_string
+    
+    # Open the twee file to parse
+    file = open(source_path, 'r')
+    # Asign the content of the twee file to a string
+    content = file.read()
 
-#List of characters to be modified and written as text
-new_string = copy_string
+    # List of characters from the content string
+    copy_string = list(content)
 
-#Open (or create) the output .yarn file
-output_file = open('output.yarn', 'w')
+    #List of characters to be modified and written as text
+    new_string = copy_string
+
+    #Open (or create) the output .yarn file
+    output_file = open(target_path, 'w')
+
+    # Replace syntax
+    regex_replace(r'(\:\:\s?\w+)', passage_header)
+    regex_replace(r'(\|\W?\w+\W+\|)', speaker_name)
+    regex_replace(r'(\{"(.*")\})', twine_metadata)
+    regex_replace(r'".+"\|', end_of_line_symbol)
+
+    # Add the last node end character to the end of the file
+    new_string = list("".join(new_string) + "\n===")
+
+    output_file.write("".join(new_string))
+
+    print('\n---------------- \nSuccess!\n----------------')
 
 # Generic function to replace a regex match with a defined value
 def regex_replace(regex, replacement_function):
     global copy_string
     global new_string
-    reg = re.compile(regex)
+    reg = re.compile(regex, re.MULTILINE)
     matches = reg.finditer(content)
     for m in matches:
-        new_string = list(reg.sub(replacement_function(m), "".join(new_string)))
+        new_string = list(reg.sub(replacement_function(m), "".join(new_string), ))
 
 # Replacing passage headers
 def passage_header(m):
@@ -37,14 +60,9 @@ def speaker_name(m):
 def twine_metadata(m):
     return ""
 
-# Replace syntax
-regex_replace(r'(\:\:\s?\w+)', passage_header)
-regex_replace(r'(\|\W?\w+\W+\|)', speaker_name)
-regex_replace(r'(\{"(.*")\})', twine_metadata)
+def end_of_line_symbol(m):
+    modified_string = list(copy_string[m.start():m.end()-2])
+    modified_string[0] = " "
+    return "".join(modified_string)
 
-# Add the last node end character to the end of the file
-new_string = list("".join(new_string) + "\n===")
-
-output_file.write("".join(new_string))
-
-print('\n---------------- \nSuccess!\n----------------')
+parse_twee('test.twee', 'output.yarn')

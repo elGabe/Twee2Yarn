@@ -44,18 +44,18 @@ tags:
 
  flow 
 !!!ASK
-YOU:"What kind of plants do you grow?"|
-YOU:"Mostly tabacco. Humans seem to love that stuff."|
+YOU: What kind of plants do you grow?
+YOU: What kind of plants do you grow?
 
 YOU:"What can you 
 
 
 
 !!!TELL
-YOU:"Your fields are full of tabacco."|
-YOU:"Yup! Humans seem to love that stuff."|
+YOU: What kind of plants do you grow?
+YOU: What kind of plants do you grow?
 
-YOU:"The Elves forecast a lot of rain this cycle."|
+YOU: What kind of plants do you grow?
 YOU:"
 
 
@@ -92,18 +92,18 @@ tags:
 
  flow 
 !!!ASK
-YOU:"What is this site?"|
-YOU:"These are the ruins of Thulan, city of the Deep Psions."|
+YOU: What kind of plants do you grow?
+YOU: What kind of plants do you grow?
 
-YOU:"What are the Deep Psions?"|
-YOU:"A race that supposedly pre-dates the Elves even."|
+YOU: What kind of plants do you grow?
+YOU: What kind of plants do you grow?
 
 
 
 
 !!!TELL
-YOU:"These mines are dangerous."|
-YOU:"Oh I know. Spend too long down here you lose your mind."|
+YOU: What kind of plants do you grow?
+YOU: What kind of plants do you grow?
 -mind
 
 YOU:"
@@ -116,45 +116,45 @@ tags:
 ---
 
  flow 
-YOU:"Hey! What are you doing here?!"|
+YOU: What kind of plants do you grow?
 
-YOU:"You! You're from above!"|
+YOU: What kind of plants do you grow?
 
 
 !!!ASK
-YOU:"Do I look like I'm from the surface?"|
-YOU:"To be honest, ya!"|
+YOU: What kind of plants do you grow?
+YOU: What kind of plants do you grow?
 
 - IF last == A1
-YOU:"How can you tell?"|
-YOU:"Your skin has seen the suns."|
+YOU: What kind of plants do you grow?
+YOU: What kind of plants do you grow?
 
 
 - ELSE
 
 
-YOU:"Have you never been overland?"|
-YOU:"No. Nothing good up there anyway!"|
+YOU: What kind of plants do you grow?
+YOU: What kind of plants do you grow?
 
 
 
 
 - smell
-YOU:"What does the overland smell like?"|
+YOU: What kind of plants do you grow?
 YOU:"Smells like trees.
 
 
-YOU:"Well can I go in anyway?"|
-YOU:"Not armed like that you can't! But if you're truly interested in coming to know the Deep Mind, then leave your weapons with Brother Darold."|
+YOU: What kind of plants do you grow?
+YOU: What kind of plants do you grow?
 
 
 
 - hive
-YOU:"Can you tell me a bit more about the Hive?"|
-YOU:"Our Hive is built on the nesting site of an ancient insect known as the Yoktal. They are believed to be some of the first psionicists."|
+YOU: What kind of plants do you grow?
+YOU: What kind of plants do you grow?
 
-YOU:"What's a psionicist?"|
-YOU:"A praticioner of psionics. One who harnesses the full power of the mind."|
+YOU: What kind of plants do you grow?
+YOU: What kind of plants do you grow?
 
 
 
@@ -167,33 +167,33 @@ YOU:"A praticioner of psionics. One who harnesses the full power of the mind."|
 
 
 - hive
-YOU:"Tell me about the Hive?"|
-YOU:"Our Hive is built on the nesting site of an ancient insect known as the Yoktal. They are believed to be some of the first psionicists."|
+YOU: What kind of plants do you grow?
+YOU: What kind of plants do you grow?
 
 
-YOU:"I haven't eaten for a while."|
-YOU:"The Hive provides for all those who put their faith in the Deep Mind."|
+YOU: What kind of plants do you grow?
+YOU: What kind of plants do you grow?
 
-YOU:"I'd like to understand the Deep Mind."|
-YOU:"That will take time, but you have taken the first step."|
+YOU: What kind of plants do you grow?
+YOU: What kind of plants do you grow?
 
 
 -trees
-YOU:"I don't smell like trees!"|
-YOU:"Trust me, I know what trees smell like."|
+YOU: What kind of plants do you grow?
+YOU: What kind of plants do you grow?
 
 
 
 
 !!!DENY
-YOU:"I am not from the surface!"|
-YOU:"Then why do you smell like trees?"|
+YOU: What kind of plants do you grow?
+YOU: What kind of plants do you grow?
 - trees
 
 
 !!!ADMIT
-YOU:"Ok, I was travelling overland before this."|
-YOU:"I knew it! You smell like the overland!"|
+YOU: What kind of plants do you grow?
+YOU: What kind of plants do you grow?
 - smell
 
 
@@ -210,32 +210,32 @@ Are you?
 
 !!HONESTY
 !!!ASK
-YOU:"Do you not allow outsiders?"|
-YOU:"Not ones as armed as you! If you are interested in coming to know the Deep Mind, then leave your weapons with Brother Darold."|
+YOU: What kind of plants do you grow?
+YOU: What kind of plants do you grow?
 
-YOU:"Where can I find Brother Darold."|
-YOU:"He's down the hall to the left. Leave your weapons, then he can take you in to show you the Hive."|
+YOU: What kind of plants do you grow?
+YOU: What kind of plants do you grow?
 - hive
 
 - hive
-YOU:"Can you tell me a bit more about the Hive?"|
-YOU:"Our Hive is built on the nesting site of an ancient insect known as the Yoktal. They are believed to be some of the first psionicists."|
+YOU: What kind of plants do you grow?
+YOU: What kind of plants do you grow?
 
-YOU:"What's a psionicist?"|
-YOU:"A praticioner of psionics. One who harnesses the full power of the mind."|
+YOU: What kind of plants do you grow?
+YOU: What kind of plants do you grow?
 
 
 
 
 !!!TELL
-YOU:"I was traveling overland before this."|
-YOU:"I knew it! You smelled like the overland."|
+YOU: What kind of plants do you grow?
+YOU: What kind of plants do you grow?
 
-YOU:"I haven't eaten for a while."|
-YOU:"The Hive provides for all those who put their faith in the Deep Mind."|
+YOU: What kind of plants do you grow?
+YOU: What kind of plants do you grow?
 
-YOU:"I'd like to understand the Deep Mind."|
-YOU:"That will take time, but you have taken the first step."|
+YOU: What kind of plants do you grow?
+YOU: What kind of plants do you grow?
 
 
 
@@ -243,31 +243,31 @@ YOU:"That will take time, but you have taken the first step."|
 
 !!DECEIPT
 !!!ASK
-YOU:"Do I look like I'm from the surface?"|
-YOU:"To be honest, ya!"|
+YOU: What kind of plants do you grow?
+YOU: What kind of plants do you grow?
 
-YOU:"How can you tell I'm from above?"|
-YOU:"Your skin has seen the suns."|
+YOU: What kind of plants do you grow?
+YOU: What kind of plants do you grow?
 
-YOU:"Well can I go in anyway?"|
-YOU:"Not armed like that you can't! But if you're truly interested in coming to know the Deep Mind, then leave your weapons with Brother Darold."|
+YOU: What kind of plants do you grow?
+YOU: What kind of plants do you grow?
 
 
 !!!TELL
-YOU:"That's absurd! I live down here!"|
-YOU:"Then why do you smell like trees?"|
+YOU: What kind of plants do you grow?
+YOU: What kind of plants do you grow?
 
-YOU:"I don't smell like trees!"|
-YOU:"Trust me, I know what trees smell like."|
+YOU: What kind of plants do you grow?
+YOU: What kind of plants do you grow?
 
-YOU:"I'm telling you, I am from the Stone."|
+YOU: What kind of plants do you grow?
 Is that true?
 \
 * YES
-YOU:"Alright, fine. Well you still can't come in here with all those weapons. Talk to Brother Darold, he can store them for you."|
+YOU: What kind of plants do you grow?
 \
 * NO
-YOU:"I still think you're lying. But either way, you can't come in here with all those weapons. Talk to Brother Darold, he can store them for you."|
+YOU: What kind of plants do you grow?
 
 
 === 
@@ -277,7 +277,7 @@ tags:
 ---
 
  01 
-YOU:"This place is spooky, even for me. Wanna get outta here?"|
+YOU: What kind of plants do you grow?
 What do you say?
 <<button "OK">>
 	<<set $time ++>>
@@ -304,8 +304,8 @@ tags:
 ---
 
  
-YOU:"Ok."|
-YOU:"Great, I'll go get my coat!"|
+YOU: What kind of plants do you grow?
+YOU: What kind of plants do you grow?
 
 [[TEST 01]] 
 $time
@@ -318,8 +318,8 @@ tags:
 ---
 
  
-YOU:"Nah."|
-YOU:"Suit yourself, buddy."|
+YOU: What kind of plants do you grow?
+YOU: What kind of plants do you grow?
 
 [[TEST 01]] 
 $time
@@ -332,7 +332,7 @@ tags:
 ---
 
  
-YOU:"Woa, I'm getting deja vu here."|
+YOU: What kind of plants do you grow?
 [[START]] 
 
 StoryInit: $init
