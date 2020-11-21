@@ -5,12 +5,12 @@ tags:
 ---
 
 
-TEST - Yarn Encounter 01
+TEST - Yarn Encounter 02
 
 
 === 
 
-title: StoryTitle
+title: StoryData
 tags: 
 ---
 
@@ -20,333 +20,173 @@ tags:
 	"format": "SugarCube",
 	"format-version": "2.31.1",
 	"start": "START",
-	"zoom": 1
+	"zoom": 0.6
 }
-
 
 === 
 
-title: StoryTitle
+title: StoryInit
 tags: 
 ---
 
- 
-[[TEST 01]] 
 
 <<set $time = 0>>
 
 
 === 
 
-title: StoryTitle
+title: START
 tags: 
 ---
 
- flow 
-!!!ASK
-YOU: What kind of plants do you grow?
-YOU: What kind of plants do you grow?
+ [UI Tag]
 
-YOU:"What can you 
-
-
-
-!!!TELL
-YOU: What kind of plants do you grow?
-YOU: What kind of plants do you grow?
-
-YOU: What kind of plants do you grow?
-YOU:"
+[[GHOST]]
 
 
 === 
 
-title: StoryTitle
+title: GHOST
 tags: 
 ---
 
- flow 
-!!BOOK
-A dusty old tome. It has the 5-sided star on its front, which often denotes arcana.
-
-
-=== 
-
-title: StoryTitle
-tags: 
----
-
- flow 
-!!DESK
-A sturdy hardwood desk. Looks old. There's a layer of dust on the top. 3 drawers.
-* Open drawers
-* Examine desk
-* ITEM
-
-
-=== 
-
-title: StoryTitle
-tags: 
----
-
- flow 
-!!!ASK
-YOU: What kind of plants do you grow?
-YOU: What kind of plants do you grow?
-
-YOU: What kind of plants do you grow?
-YOU: What kind of plants do you grow?
-
-
-
-
-!!!TELL
-YOU: What kind of plants do you grow?
-YOU: What kind of plants do you grow?
--mind
-
-YOU:"
-
-
-=== 
-
-title: StoryTitle
-tags: 
----
-
- flow 
-YOU: What kind of plants do you grow?
-
-YOU: What kind of plants do you grow?
-
-
-!!!ASK
-YOU: What kind of plants do you grow?
-YOU: What kind of plants do you grow?
-
-- IF last == A1
-YOU: What kind of plants do you grow?
-YOU: What kind of plants do you grow?
-
-
-- ELSE
-
-
-YOU: What kind of plants do you grow?
-YOU: What kind of plants do you grow?
-
-
-
-
-- smell
-YOU: What kind of plants do you grow?
-YOU:"Smells like trees.
-
-
-YOU: What kind of plants do you grow?
-YOU: What kind of plants do you grow?
-
-
-
-- hive
-YOU: What kind of plants do you grow?
-YOU: What kind of plants do you grow?
-
-YOU: What kind of plants do you grow?
-YOU: What kind of plants do you grow?
-
-
-
-
-
-
-
-!!!TELL
-
-
-
-- hive
-YOU: What kind of plants do you grow?
-YOU: What kind of plants do you grow?
-
-
-YOU: What kind of plants do you grow?
-YOU: What kind of plants do you grow?
-
-YOU: What kind of plants do you grow?
-YOU: What kind of plants do you grow?
-
-
--trees
-YOU: What kind of plants do you grow?
-YOU: What kind of plants do you grow?
-
-
-
-
-!!!DENY
-YOU: What kind of plants do you grow?
-YOU: What kind of plants do you grow?
-- trees
-
-
-!!!ADMIT
-YOU: What kind of plants do you grow?
-YOU: What kind of plants do you grow?
-- smell
-
-
-
-
-----
-
-
-Are you?
-
-* HONESTY
-* DECEIPT
-
-
-!!HONESTY
-!!!ASK
-YOU: What kind of plants do you grow?
-YOU: What kind of plants do you grow?
-
-YOU: What kind of plants do you grow?
-YOU: What kind of plants do you grow?
-- hive
-
-- hive
-YOU: What kind of plants do you grow?
-YOU: What kind of plants do you grow?
-
-YOU: What kind of plants do you grow?
-YOU: What kind of plants do you grow?
-
-
-
-
-!!!TELL
-YOU: What kind of plants do you grow?
-YOU: What kind of plants do you grow?
-
-YOU: What kind of plants do you grow?
-YOU: What kind of plants do you grow?
-
-YOU: What kind of plants do you grow?
-YOU: What kind of plants do you grow?
-
-
-
-
-
-!!DECEIPT
-!!!ASK
-YOU: What kind of plants do you grow?
-YOU: What kind of plants do you grow?
-
-YOU: What kind of plants do you grow?
-YOU: What kind of plants do you grow?
-
-YOU: What kind of plants do you grow?
-YOU: What kind of plants do you grow?
-
-
-!!!TELL
-YOU: What kind of plants do you grow?
-YOU: What kind of plants do you grow?
-
-YOU: What kind of plants do you grow?
-YOU: What kind of plants do you grow?
-
-YOU: What kind of plants do you grow?
-Is that true?
-\
-* YES
-YOU: What kind of plants do you grow?
-\
-* NO
-YOU: What kind of plants do you grow?
-
-
-=== 
-
-title: StoryTitle
-tags: 
----
-
- 01 
-YOU: What kind of plants do you grow?
-What do you say?
-<<button "OK">>
-	<<set $time ++>>
-	<<if $time > 1>>
-		<<goto "REPEAT">>
-	<<else>>
-		<<goto "OK">>
-	<</if>>
-<</button>>\
-<<button "NAH">>
-	<<set $time += 1>>
-	<<if $time > 1>>
-		<<goto "REPEAT">>
-	<<else>>
-		<<goto "NAH">>
-	<</if>>
+ [NPC Tag]
+A spooky ghost who seems to have forgotten that Halloween was a month ago. He wears a spooky table cloth and is bound in chains formed from his misdeads in life. You're not sure why he's staring at you. Maybe he wants to chat.
+
+<<button "ASK" "Ghost.A1">>
+<</button>>
+<<button "TELL" "Ghost.T1">>
 <</button>>
 
 
 === 
 
-title: StoryTitle
+title: Ghost.A1
 tags: 
 ---
 
- 
-YOU: What kind of plants do you grow?
-YOU: What kind of plants do you grow?
 
-[[TEST 01]] 
-$time
+You: What's your name?
+Ghost: Dom Delouise. Pleased to meeeeet yooooou...
+<<button "ASK" "Ghost.A2">>
+<</button>>
+<<button "TELL" "Ghost.T1">>
+<</button>>
+
+=== 
+
+title: Ghost.A2
+tags: 
+---
+
+
+You: Where is the nearest washroom?
+Ghost: Down the hall to the left. But it's out of orderrr...
+<<button "TELL">>
+	<<if not hasVisited("Ghost.T1")>>
+		<<goto "Ghost.T1">>
+	<<elseif not hasVisited("Ghost.T2")>>
+		<<goto "Ghost.T2">>
+	<<else>>
+		<<goto "Ghost.T3">>
+	<</if>>
+<</button>>
+
+=== 
+
+title: Ghost.A3
+tags: 
+---
+
+
+You: What ever happened to that show anyway?
+Ghost: Creative differencesss...
+<<if not hasVisited("Ghost.A2")>>\
+<<else>>
+	<<button "ASK" "Ghost.A2">>
+	<</button>>
+<</if>>
+<<button "TELL">>
+	<<if not hasVisited("Ghost.T2")>>
+		<<goto "Ghost.T2">>
+	<<else>>
+		<<goto "Ghost.T4">>
+	<</if>>
+<</button>>
+
+=== 
+
+title: Ghost.T1
+tags: 
+---
+
+
+You: You look familiar.
+Ghost: In life I was the host of Candid Cameraaaa...
+<<button "ASK" "Ghost.A3">>
+<</button>>
+<<button "TELL" "Ghost.T3">>
+<</button>>
+
+=== 
+
+title: Ghost.T2
+tags: 
+---
+
+
+You: This is a pretty spooky place you got here.
+Ghost: The rent is a little expensive, but it's a good neighbourhoooood...
+<<if hasVisited("Ghost.A2")>>\
+<<else>>
+	<<button "ASK" "Ghost.A2">>
+	<</button>>
+<</if>>
+<<button "TELL">>
+	<<if hasVisited("Ghost.T3")>>
+		<<goto "Ghost.T4">>
+	<<else>>
+		<<goto "Ghost.T3">>
+	<</if>>
+<</button>>
+
+=== 
+
+title: Ghost.T3
+tags: 
+---
+
+
+You: Candid Camera! That's where I know you from.
+Ghost: It's true. I hosted that show for many yeeeeaarsss...
+<<button "ASK" "Ghost.A3">>
+<</button>>
+<<button "TELL">>
+	<<if not hasVisited("Ghost.T2")>>
+		<<goto "Ghost.T2">>
+	<<else>>
+		<<goto "Ghost.T4">>
+<</button>>
+
+=== 
+
+title: Ghost.T4
+tags: 
+---
+
+
+You: I think I should get going.
+Ghost: But waaait...I have unfinished bussssinessss...
+[[END]]
 
 
 === 
 
-title: StoryTitle
+title: END
 tags: 
 ---
 
- 
-YOU: What kind of plants do you grow?
-YOU: What kind of plants do you grow?
 
-[[TEST 01]] 
-$time
-
-
-=== 
-
-title: StoryTitle
-tags: 
----
-
- 
-YOU: What kind of plants do you grow?
-[[START]] 
-
-StoryInit: $init
-
-
-=== 
-
-title: StoryTitle
-tags: 
----
-
- 
-<<set $init = 100>>
-
-
+The ghost pouts as you leave.
 
 ===
