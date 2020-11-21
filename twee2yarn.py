@@ -29,7 +29,7 @@ def end_of_line_symbol(m):
     return "".join(modified_string)
 
 patterns = {
-    r'(\:\:\s?\w+)(\.\w+)?' : passage_header,
+    r'(\:\:\s?\w+)(\.\w+)*' : passage_header,
     r'(\|\W?\w+\W+\|)' : speaker_name,
     r'(\{"(.*")\})' : twine_metadata,
     r'".+"\|' : end_of_line_symbol
@@ -65,6 +65,5 @@ def parse_twee(source_path, target_path):
 def regex_replace(regex, replacement_function):
     global new_string
     new_string = list(re.sub(regex, replacement_function, "".join(new_string), 0, re.MULTILINE))
-
 
 parse_twee('test.twee', 'output.yarn')
